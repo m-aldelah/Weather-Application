@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/stormbg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="244dp"
+        android:layout_height="216dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242"
+        app:srcCompat="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="255dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/alegreya"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="296dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/alegreya_bold"
+        android:text="Dearborn, Mi"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="137dp"
+        android:layout_height="81dp"
+        android:fontFamily="@font/alegreya"
+        android:text="50"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="376dp"
+        android:layout_height="194dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dayOneIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/dayTwoIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/dayOneIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/dayThreeIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/dayTwoIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/dayFourIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/dayThreeIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/dayFiveIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/dayFourIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/daySixIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/dayFiveIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <ImageView
+                android:id="@+id/daySevenIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toEndOf="@id/daySixIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud" />
+
+            <TextView
+                android:id="@+id/dayOneDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="Wednesday"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/dayOneIcon"
+                app:layout_constraintStart_toStartOf="@+id/dayOneIcon" />
+
+            <TextView
+                android:id="@+id/dayTwoDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/dayTwoIcon"
+                app:layout_constraintStart_toStartOf="@+id/dayTwoIcon" />
+
+            <TextView
+                android:id="@+id/dayThreeDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/dayThreeIcon"
+                app:layout_constraintStart_toStartOf="@+id/dayThreeIcon" />
+
+            <TextView
+                android:id="@+id/dayFourDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/dayFourIcon"
+                app:layout_constraintStart_toStartOf="@+id/dayFourIcon" />
+
+            <TextView
+                android:id="@+id/dayFiveDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/dayFiveIcon"
+                app:layout_constraintStart_toStartOf="@+id/dayFiveIcon" />
+
+            <TextView
+                android:id="@+id/daySixDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/daySixIcon"
+                app:layout_constraintStart_toStartOf="@+id/daySixIcon" />
+
+            <TextView
+                android:id="@+id/daySevenDate"
+                android:layout_width="102dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toTopOf="@+id/daySevenIcon"
+                app:layout_constraintStart_toStartOf="@+id/daySevenIcon" />
+
+            <TextView
+                android:id="@+id/dayOneTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/dayOneIcon"
+                app:layout_constraintTop_toBottomOf="@+id/dayOneIcon" />
+
+            <TextView
+                android:id="@+id/dayTwoTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/dayTwoIcon"
+                app:layout_constraintTop_toBottomOf="@+id/dayTwoIcon" />
+
+            <TextView
+                android:id="@+id/dayThreeTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/dayThreeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/dayThreeIcon" />
+
+            <TextView
+                android:id="@+id/dayFourTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/dayFourIcon"
+                app:layout_constraintTop_toBottomOf="@+id/dayFourIcon" />
+
+            <TextView
+                android:id="@+id/dayFiveTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/dayFiveIcon"
+                app:layout_constraintTop_toBottomOf="@+id/dayFiveIcon" />
+
+            <TextView
+                android:id="@+id/daySixTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/daySixIcon"
+                app:layout_constraintTop_toBottomOf="@+id/daySixIcon" />
+
+            <TextView
+                android:id="@+id/daySevenTemp"
+                android:layout_width="67dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:text="75"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/daySevenIcon"
+                app:layout_constraintTop_toBottomOf="@+id/daySevenIcon" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
